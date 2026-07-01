@@ -1,0 +1,61 @@
+---
+title: "Defining metrics"
+description: "Design the numbers your project will prove — totals, averages, and percentages"
+icon: "chart-simple"
+---
+
+Metrics are the backbone of a Mirage project. They define what the AI looks for in field reports, what stewards approve, and what donors ultimately see. Take a few minutes to design them well — everything downstream inherits their quality.
+
+## Anatomy of a metric
+
+Every metric has:
+
+- **Label** — the donor-facing name ("Wells dug", "Lives impacted", "Water access rate").
+- **Description** — what it measures and why it matters. This also helps the AI extract the right values from reports.
+- **Aggregation** — how individual report values roll up into one number.
+- **Presentation** — how the final number is formatted for display.
+
+## Aggregation types
+
+### Scalar metrics
+
+One value per report, combined across reports:
+
+| Aggregator | Use it for | Example |
+| --- | --- | --- |
+| **Sum** | Cumulative totals | Total wells dug across all reports |
+| **Average** | Typical values | Average satisfaction score (1–5) |
+| **Count** | How many reports meet a condition | Number of site visits completed |
+| **Min / Max** | Extremes and thresholds | Deepest well drilled |
+
+Scalar aggregation can be **confidence-weighted**, so values the AI extracted with high confidence count more than uncertain ones.
+
+### Ratio metrics
+
+Percentages computed across reports:
+
+| Aggregator | Use it for | Example |
+| --- | --- | --- |
+| **Boolean share** | "What fraction said yes?" | % of households with clean water access |
+| **Filtered ratio** | A numerator over a denominator | Graduation rate: students passing ÷ students enrolled |
+
+## Presentation options
+
+Choose how the aggregated number reads on dashboards and donor reports:
+
+- **Number** — with configurable decimals and compact notation (1.2K, 3M).
+- **Percent** — with optional underlying counts shown alongside.
+- **Currency** — symbol, placement, and decimals configurable.
+- **Threshold** — display "Met goal" / "Below target" based on a target value, for metrics that are really pass/fail commitments.
+
+## How values get into metrics
+
+You never type metric values by hand. When a field report is finalized, Mirage's AI reads the answers, photos, transcriptions, and media summaries, and proposes **contributions** — candidate values for your metrics, each with a confidence score and a link to its source. Stewards approve or reject each contribution in the [review queue](/projects/reviewing-reports); only approved contributions feed the aggregate.
+
+<Tip>
+  Write question prompts with your metrics in mind. If your metric is "households served", make sure a reporting task asks a question whose answer contains that number — the AI extracts values from what reporters actually submit. See [Reporting tasks](/projects/reporting-tasks).
+</Tip>
+
+<Note>
+  Metrics can be edited from project settings, but changing aggregation mid-project changes what your historical numbers mean. Prefer adding a new metric over redefining one that already has approved contributions.
+</Note>

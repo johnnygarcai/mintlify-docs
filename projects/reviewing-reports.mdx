@@ -1,0 +1,53 @@
+---
+title: "Reviewing reports"
+description: "Give reporting feedback — approve or reject AI-extracted metrics so only verified data reaches donors"
+icon: "clipboard-check"
+---
+
+The **Reporting** page is your organization's review queue. This is where the "steward approved" half of Mirage happens: the AI proposes, you decide.
+
+## What happens when a report comes in
+
+When a reporter submits and finalizes a report, Mirage automatically:
+
+1. **Analyzes the media** — audio is transcribed and language-detected (with an English translation when the original is in another language); photos and video get AI-written summaries.
+2. **Extracts metric contributions** — for each of the project's metrics, the AI proposes values it found in the answers and evidence, each with a **confidence score** and a link to the exact question or attachment it came from.
+3. **Queues everything for review** — contributions arrive as **pending** and count toward nothing until you act.
+
+## Review a report
+
+<Steps>
+  <Step title="Open the submission">
+    From the **Reporting** page, open a finalized report. You'll see the reporter's answers, their attached photos, video, and audio (with transcriptions and AI summaries), and their free-form observation notes.
+  </Step>
+  <Step title="Evaluate the contributions">
+    Each proposed metric contribution shows the metric, the extracted value, the AI's confidence, and its source. Click through to the source to check the AI's work against the actual evidence.
+  </Step>
+  <Step title="Approve or reject each one">
+    - **Approve** — the value rolls up into the project's aggregated metrics and becomes available to donor reports.
+    - **Reject** — the value is excluded. Use this for misreads, duplicates, or evidence that doesn't hold up.
+  </Step>
+</Steps>
+
+Every decision is recorded with who reviewed it and when — your verification audit trail.
+
+## What the reporter sees
+
+Your review is the feedback loop for the field. In the reporter app, each submission shows its status:
+
+| Status | Meaning for the reporter |
+| --- | --- |
+| **Draft** | Still being written; not yet submitted. |
+| **Pending** | Submitted and awaiting steward review. |
+| **Accepted** | At least one of its contributions was approved — their work counted. |
+| **Declined** | Its contributions were rejected. |
+
+Consistently reviewing promptly keeps reporters engaged — they can see their work landing.
+
+## Consent flags
+
+Photos and video arrive with the consent metadata reporters captured at upload: whether **face permission** was obtained and whether the media is **internal only**. You don't need to police this manually at review time — donor-facing pages exclude non-consented and internal-only media automatically — but the flags are visible during review so you know what will and won't be publicly usable.
+
+<Tip>
+  High-confidence contributions from a reporter with a good track record can usually be approved quickly; spend your review time on low-confidence extractions and unusual values. Confidence scores exist exactly to help you triage.
+</Tip>
