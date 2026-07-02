@@ -11,8 +11,7 @@
   "favicon": "/logo/mirage-logo.png",
   "logo": {
     "light": "/logo/mirage-logo.png",
-    "dark": "/logo/mirage-logo.png",
-    "href": "https://www.mirage.partners"
+    "dark": "/logo/mirage-logo.png"
   },
   "navigation": {
     "groups": [
@@ -64,26 +63,7 @@
           "support/faq"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Steward Dashboard",
-          "href": "https://app.mirage.partners",
-          "icon": "chart-line"
-        },
-        {
-          "anchor": "Reporter App",
-          "href": "https://report.mirage.partners",
-          "icon": "mobile"
-        },
-        {
-          "anchor": "mirage.partners",
-          "href": "https://www.mirage.partners",
-          "icon": "globe"
-        }
-      ]
-    }
+    ]
   },
   "navbar": {
     "links": [
