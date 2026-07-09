@@ -22,10 +22,11 @@
 {/* Add any project-specific style rules below */}
 
 - Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
+- Keep sentences concise: one idea per sentence
 - Use sentence case for headings
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
+- **No em dashes (—).** Use a period, comma, colon, or parentheses instead. This applies everywhere text renders: body prose, frontmatter descriptions, Frame captions, Accordion titles.
 
 ## Content boundaries
 
